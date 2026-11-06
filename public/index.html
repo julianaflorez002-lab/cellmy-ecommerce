@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cellmy · Celulares y televisores</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="anuncio">Envíos a Tocaima, Agua de Dios y a nivel nacional · Compra 100% segura con Wompi</div>
+  <header class="cabecera">
+    <div class="fila-superior">
+      <a href="/" class="logo"><img src="img/logo.png" alt="Cellmy" class="logo-img"></a>
+      <form id="buscar" class="buscador" action="/" method="get">
+        <input id="q" name="q" type="search" placeholder="Busca tu celular o televisor ideal" aria-label="Buscar">
+      </form>
+      <nav class="acciones">
+        <a id="cuenta-link" href="/login.html">Iniciar sesión</a>
+        <a href="/carrito.html" class="carrito">Carrito <span id="carrito-contador" class="contador">0</span></a>
+      </nav>
+    </div>
+    <nav class="menu-categorias"><a href="/?cat=Celulares">CELULARES</a><a href="/?cat=Televisores">TELEVISORES</a><a href="/">OFERTAS</a><a href="/">NOVEDADES</a><a href="#">CONTACTO</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-texto">
+        <span class="etiqueta">Nuevo en Cellmy</span>
+        <h1>Celulares y televisores,<br>al mejor precio de Cundinamarca</h1>
+        <p>Paga con Wompi o financia tu compra con Addi. Envíos a todo el país con Inter Rapidísimo.</p>
+        <a href="#catalogo" class="boton-principal">Ver catálogo</a>
+      </div>
+      <div class="hero-foto">Foto destacada</div>
+    </section>
+
+    <section class="categorias">
+      <a class="tile" href="/?cat=Celulares"><span>Celulares</span></a>
+      <a class="tile" href="/?cat=Televisores"><span>Televisores</span></a>
+    </section>
+
+    <section>
+      <div class="titulo-seccion"><h2>Los más vendidos</h2></div>
+      <div id="destacados" class="grilla"></div>
+    </section>
+
+    <section id="catalogo">
+      <div class="titulo-seccion"><h2>Catálogo</h2></div>
+      <section class="filtros" aria-label="Filtros">
+        <select id="categoria" aria-label="Categoría">
+          <option value="">Todas las categorías</option>
+        </select>
+        <input id="min" type="number" min="0" placeholder="Precio mínimo" aria-label="Precio mínimo">
+        <input id="max" type="number" min="0" placeholder="Precio máximo" aria-label="Precio máximo">
+        <button id="aplicar" type="button">Aplicar</button>
+      </section>
+      <p id="resumen" class="resumen"></p>
+      <section id="grilla" class="grilla"></section>
+      <nav class="paginacion">
+        <button id="anterior" type="button">Anterior</button>
+        <span id="pagina"></span>
+        <button id="siguiente" type="button">Siguiente</button>
+      </nav>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="pie-columnas">
+      <div><h4>Ayuda</h4><a href="/pedidos.html">Estado de mi pedido</a><a href="#">Preguntas frecuentes</a><a href="#">Garantías</a></div>
+      <div><h4>Cellmy</h4><a href="#">Sobre nosotros</a><a href="#">Nuestras tiendas</a><a href="#">Trabaja con nosotros</a></div>
+      <div><h4>Síguenos</h4><a href="#">Instagram</a><a href="#">WhatsApp Business</a></div>
+      <div><h4>Medios de pago</h4><a href="#">Wompi</a><a href="#">Addi</a></div>
+    </div>
+    <p class="pie-legal">© 2026 Cellmy Tecnología S.A.S. — accesorios y tecnología</p>
+  </footer>
+
+  <script src="js/sesion.js"></script>
+  <script src="js/catalogo.js"></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+/* Paleta tomada de los mockups de Cellmy. Pendiente de confirmar con la empresa. */
+:root {
+  --hero: #0b3b3b;
+  --acento: #00e0d3;
+  --acento-oscuro: #0e7c7b;
+  --negro: #0a0a0a;
+  --texto: #1a1f1f;
+  --gris: #6b7280;
+  --linea: #e3e8e8;
+  --fondo: #f4f7f7;
+  --blanco: #ffffff;
+  --fondo-foto: #e8f6f5;
+  --error: #dc2626;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--texto);
+  background: var(--blanco);
+}
+
+.anuncio {
+  background: var(--negro);
+  color: var(--blanco);
+  font-size: 12px;
+  text-align: center;
+  padding: 8px 12px;
+}
+
+.cabecera {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--linea);
+  flex-wrap: wrap;
+}
+.logo {
+  background: var(--negro);
+  color: var(--acento);
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.buscador { flex: 1; min-width: 200px; }
+.buscador input {
+  width: 100%;
+  padding: 10px 16px;
+  border: 1px solid var(--linea);
+  border-radius: 20px;
+  background: var(--fondo);
+  font-size: 14px;
+}
+
+.contenedor { max-width: 1200px; margin: 0 auto; padding: 24px; }
+
+.filtros {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.filtros select,
+.filtros input {
+  padding: 10px 12px;
+  border: 1px solid var(--linea);
+  border-radius: 8px;
+  font-size: 14px;
+  min-width: 160px;
+}
+button {
+  padding: 10px 16px;
+  border: 1px solid var(--linea);
+  border-radius: 8px;
+  background: var(--blanco);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:hover:not(:disabled) { border-color: var(--acento-oscuro); }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+#aplicar, .boton-principal {
+  background: var(--acento);
+  border-color: var(--acento);
+  color: var(--negro);
+}
+
+.resumen { color: var(--gris); font-size: 13px; }
+
+.grilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 12px;
+}
+.tarjeta {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid var(--linea);
+  border-radius: 12px;
+  padding: 12px;
+  background: var(--blanco);
+}
+.tarjeta:hover { border-color: var(--acento-oscuro); }
+.foto {
+  height: 160px;
+  background: var(--fondo-foto);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--acento-oscuro);
+  font-size: 13px;
+  font-weight: 600;
+}
+.categoria-txt { font-size: 11px; color: var(--gris); margin: 10px 0 2px; font-weight: 600; }
+.tarjeta h3 { font-size: 15px; margin: 0 0 6px; }
+.precio { font-size: 16px; font-weight: 700; margin: 0; }
+.stock { font-size: 12px; color: var(--gris); margin: 4px 0 0; }
+.stock.agotado { color: var(--error); }
+
+.paginacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.volver { color: var(--acento-oscuro); text-decoration: none; font-size: 14px; }
+.detalle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 16px;
+}
+@media (max-width: 720px) {
+  .detalle { grid-template-columns: 1fr; gap: 20px; }
+}
+.detalle .foto { height: 380px; }
+.detalle h1 { font-size: 26px; margin: 4px 0 8px; }
+.detalle .precio-grande { font-size: 30px; font-weight: 700; margin: 12px 0; }
+.detalle .sku { color: var(--gris); font-size: 13px; }
+.opciones { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 16px; }
+.opciones button.seleccionada { border: 2px solid var(--acento); }
+.opciones button:disabled { text-decoration: line-through; }
+.mensaje { font-size: 13px; color: var(--gris); margin-top: 8px; }
+.error { color: var(--error); font-size: 15px; }
+
+/* ---------- Cuenta, carrito y formularios ---------- */
+.acciones { display: flex; align-items: center; gap: 18px; margin-left: auto; font-size: 14px; }
+.acciones a { color: var(--texto); text-decoration: none; font-weight: 600; }
+.acciones a:hover { color: var(--acento-oscuro); }
+.contador {
+  display: inline-block; min-width: 20px; padding: 1px 6px; margin-left: 4px;
+  background: var(--acento); color: var(--negro); border-radius: 10px; font-size: 12px; text-align: center;
+}
+.enlace { background: none; border: none; padding: 0; color: var(--gris); cursor: pointer; font-size: 14px; }
+.oculto { display: none !important; }
+
+.auth-card {
+  max-width: 440px; margin: 24px auto; padding: 24px;
+  border: 1px solid var(--linea); border-radius: 12px; background: var(--blanco);
+}
+.pestanas { display: flex; gap: 8px; margin-bottom: 20px; }
+.pestanas button { flex: 1; }
+.pestanas button.activa { background: var(--acento); border-color: var(--acento); color: var(--negro); }
+
+.formulario { display: flex; flex-direction: column; gap: 14px; }
+.formulario label { display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; }
+.formulario label.fila-check { flex-direction: row; align-items: flex-start; font-weight: 400; }
+.formulario input, .formulario select {
+  padding: 10px 12px; border: 1px solid var(--linea); border-radius: 8px; font-size: 14px; font-weight: 400;
+}
+fieldset { border: 1px solid var(--linea); border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+legend { font-weight: 700; padding: 0 6px; }
+.opcion { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; cursor: pointer; }
+.opcion input { margin-top: 3px; }
+.opcion span { color: var(--gris); }
+
+.carrito-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 28px; margin-top: 16px; }
+@media (max-width: 800px) { .carrito-grid { grid-template-columns: 1fr; } }
+.lista-carrito { display: flex; flex-direction: column; gap: 14px; }
+.fila-carrito {
+  display: grid; grid-template-columns: 1fr auto auto; gap: 16px; align-items: center;
+  padding: 14px; border: 1px solid var(--linea); border-radius: 10px;
+}
+.fila-carrito h3 { margin: 0 0 4px; font-size: 16px; }
+.controles { display: flex; align-items: center; gap: 8px; }
+.controles button { padding: 6px 12px; }
+.controles .cantidad { min-width: 24px; text-align: center; font-weight: 700; }
+.controles .quitar { color: var(--error); border-color: transparent; }
+.subtotal { font-weight: 700; margin: 0; }
+.resumen-box { padding: 20px; border: 1px solid var(--linea); border-radius: 12px; background: var(--fondo); height: fit-content; display: flex; flex-direction: column; gap: 10px; }
+.resumen-box h2 { margin: 0; font-size: 18px; }
+.boton-secundario {
+  display: inline-block; padding: 10px 16px; border: 1px solid var(--linea); border-radius: 8px;
+  color: var(--texto); text-decoration: none; font-weight: 600; font-size: 14px; background: var(--blanco);
+}
+.mensaje-error { color: var(--error); font-size: 14px; }
+.mensaje-ok { color: var(--acento-oscuro); font-size: 14px; }
+.confirmacion { padding: 20px; border: 1px solid var(--acento); border-radius: 12px; background: var(--fondo); margin-bottom: 16px; }
+
+.linea-tiempo { display: flex; gap: 0; list-style: none; padding: 0; margin: 16px 0; counter-reset: paso; }
+.linea-tiempo .etapa {
+  flex: 1; text-align: center; font-size: 13px; color: var(--gris); padding-top: 26px; position: relative;
+}
+.linea-tiempo .etapa::before {
+  content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 16px; height: 16px; border-radius: 50%; background: var(--linea);
+}
+.linea-tiempo .etapa.hecha { color: var(--texto); font-weight: 600; }
+.linea-tiempo .etapa.hecha::before { background: var(--acento); }
+.detalle-pedido { display: flex; flex-direction: column; gap: 8px; padding: 20px; border: 1px solid var(--linea); border-radius: 12px; }
+.productos { padding-left: 20px; margin: 4px 0; }
+
+.tabla { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 16px; }
+.tabla th, .tabla td { border-bottom: 1px solid var(--linea); padding: 10px 8px; text-align: left; vertical-align: middle; }
+.tabla th { background: var(--fondo); font-size: 12px; text-transform: uppercase; color: var(--gris); }
+
+/* ---------- Diseño según el prototipo de Figma ---------- */
+.cabecera { flex-direction: column; align-items: stretch; gap: 0; padding: 0; }
+.fila-superior { display: flex; align-items: center; gap: 24px; padding: 14px 40px; }
+.logo { background: none; padding: 0; }
+.logo-img { height: 56px; width: auto; display: block; }
+.buscador { flex: 1; min-width: 200px; margin: 0; }
+.buscador input { padding: 12px 20px; border-radius: 24px; border: none; font-size: 15px; }
+.acciones { gap: 28px; font-size: 14px; }
+
+.menu-categorias {
+  display: flex; gap: 36px; padding: 0 40px;
+  border-top: 1px solid var(--linea); overflow-x: auto;
+}
+.menu-categorias a {
+  padding: 14px 0 12px; font-size: 13px; font-weight: 600; text-transform: uppercase;
+  color: var(--texto); text-decoration: none; border-bottom: 3px solid transparent; white-space: nowrap;
+}
+.menu-categorias a.activo { border-bottom-color: var(--acento); }
+
+.hero {
+  display: grid; grid-template-columns: 1.6fr 1fr; gap: 28px; align-items: center;
+  margin: 24px 40px 0; padding: 48px; min-height: 300px;
+  background: var(--hero); color: var(--blanco); border-radius: 16px;
+}
+.hero h1 { font-size: 40px; line-height: 1.15; margin: 14px 0; color: var(--blanco); }
+.hero p { color: #cfe9e6; font-size: 16px; max-width: 520px; line-height: 1.5; }
+.hero .etiqueta {
+  display: inline-block; background: var(--acento); color: var(--negro);
+  font-size: 11px; font-weight: 700; padding: 6px 12px; border-radius: 12px; text-transform: uppercase;
+}
+.hero .boton-principal { display: inline-block; margin-top: 18px; padding: 12px 22px; text-decoration: none; }
+.hero-foto {
+  height: 220px; border-radius: 12px; background: #1f3a3a; color: #8fb5b0;
+  display: flex; align-items: center; justify-content: center; font-size: 14px;
+}
+
+.categorias { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 40px 0; }
+.tile {
+  height: 150px; border-radius: 12px; background: #9aa3a3; color: var(--blanco);
+  display: flex; align-items: flex-end; padding: 22px; text-decoration: none;
+  font-size: 24px; font-weight: 700;
+}
+
+.titulo-seccion { padding: 0 40px; margin: 32px 0 12px; }
+.titulo-seccion h2 { margin: 0; font-size: 24px; }
+#destacados, #grilla { margin-left: 40px; margin-right: 40px; }
+#catalogo .filtros, #catalogo .resumen, #catalogo .paginacion { margin-left: 40px; margin-right: 40px; }
+#catalogo .filtros { margin-top: 0; }
+
+.foto { position: relative; height: 220px; }
+.foto-texto { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--acento-oscuro); font-size: 13px; font-weight: 600; }
+.foto .descuento {
+  position: absolute; top: 10px; left: 10px; z-index: 1;
+  background: var(--acento); color: var(--negro); font-size: 12px; font-weight: 700;
+  padding: 4px 9px; border-radius: 12px;
+}
+.precios { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin: 6px 0 0; }
+.precios .precio { margin: 0; }
+.precio-anterior { color: var(--gris); text-decoration: line-through; font-size: 14px; }
+.precio-anterior-bloque { color: var(--gris); font-size: 14px; margin: 4px 0 0; }
+
+.pie { background: var(--negro); color: var(--blanco); padding: 36px 40px 24px; margin-top: 48px; }
+.pie-columnas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.pie h4 { margin: 0 0 12px; font-size: 14px; }
+.pie a { display: block; color: #c9d1d1; text-decoration: none; font-size: 13px; margin-bottom: 8px; }
+.pie-legal { color: #8a9494; font-size: 12px; margin: 28px 0 0; }
+
+@media (max-width: 800px) {
+  .fila-superior { flex-wrap: wrap; padding: 12px 16px; }
+  .menu-categorias { gap: 22px; padding: 0 16px; }
+  .hero { grid-template-columns: 1fr; margin: 16px; padding: 28px; }
+  .hero h1 { font-size: 28px; }
+  .categorias { margin: 16px 16px 0; grid-template-columns: 1fr; }
+  .titulo-seccion { padding: 0 16px; }
+  #destacados, #grilla, #catalogo .filtros, #catalogo .resumen, #catalogo .paginacion { margin-left: 16px; margin-right: 16px; }
+  .pie { padding: 24px 16px; }
+  .pie-columnas { grid-template-columns: 1fr 1fr; }
+}

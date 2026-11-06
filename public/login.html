@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cellmy · Iniciar sesión</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="anuncio">Envíos a Tocaima, Agua de Dios y a nivel nacional · Compra 100% segura con Wompi</div>
+  <header class="cabecera">
+    <div class="fila-superior">
+      <a href="/" class="logo"><img src="img/logo.png" alt="Cellmy" class="logo-img"></a>
+      <form id="buscar" class="buscador" action="/" method="get">
+        <input id="q" name="q" type="search" placeholder="Busca tu celular o televisor ideal" aria-label="Buscar">
+      </form>
+      <nav class="acciones">
+        <a id="cuenta-link" href="/login.html">Iniciar sesión</a>
+        <a href="/carrito.html" class="carrito">Carrito <span id="carrito-contador" class="contador">0</span></a>
+      </nav>
+    </div>
+    <nav class="menu-categorias"><a href="/?cat=Celulares">CELULARES</a><a href="/?cat=Televisores">TELEVISORES</a><a href="/">OFERTAS</a><a href="/">NOVEDADES</a><a href="#">CONTACTO</a></nav>
+  </header>
+
+  <main class="contenedor">
+    <div class="auth-card">
+      <div class="pestanas">
+        <button id="pestana-login" type="button" class="activa">Iniciar sesión</button>
+        <button id="pestana-registro" type="button">Registrarse</button>
+      </div>
+
+      <form id="form-login" class="formulario">
+        <label>Correo electrónico <input id="login-correo" type="email" required></label>
+        <label>Contraseña <input id="login-password" type="password" required></label>
+        <button type="submit" class="boton-principal">Entrar</button>
+      </form>
+
+      <form id="form-registro" class="formulario oculto">
+        <label>Nombre completo <input id="reg-nombre" type="text" required></label>
+        <label>Correo electrónico <input id="reg-correo" type="email" required></label>
+        <label>Teléfono de contacto <input id="reg-telefono" type="tel"></label>
+        <label>Contraseña (mínimo 8 caracteres) <input id="reg-password" type="password" minlength="8" required></label>
+        <label class="fila-check"><input id="reg-acepto" type="checkbox" required> Acepto el tratamiento de mis datos personales para gestionar mis pedidos.</label>
+        <button type="submit" class="boton-principal">Crear cuenta</button>
+      </form>
+
+      <div id="aviso"></div>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="pie-columnas">
+      <div><h4>Ayuda</h4><a href="/pedidos.html">Estado de mi pedido</a><a href="#">Preguntas frecuentes</a><a href="#">Garantías</a></div>
+      <div><h4>Cellmy</h4><a href="#">Sobre nosotros</a><a href="#">Nuestras tiendas</a><a href="#">Trabaja con nosotros</a></div>
+      <div><h4>Síguenos</h4><a href="#">Instagram</a><a href="#">WhatsApp Business</a></div>
+      <div><h4>Medios de pago</h4><a href="#">Wompi</a><a href="#">Addi</a></div>
+    </div>
+    <p class="pie-legal">© 2026 Cellmy Tecnología S.A.S. — accesorios y tecnología</p>
+  </footer>
+
+  <script src="js/sesion.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
