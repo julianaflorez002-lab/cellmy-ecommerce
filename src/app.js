@@ -5,6 +5,7 @@ const cuenta = require('./rutas/cuenta');
 const carrito = require('./rutas/carrito');
 const pedidos = require('./rutas/pedidos');
 const admin = require('./rutas/admin');
+const administracion = require('./rutas/administracion');
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use('/api', cuenta);
 app.use('/api', carrito);
 app.use('/api', pedidos);
 app.use('/api', admin);
+app.use('/api', administracion);
 
 app.use((req, res) => res.status(404).json({ error: 'Ruta no encontrada' }));
 

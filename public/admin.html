@@ -3,19 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cellmy · Panel de pedidos</title>
+  <title>Cellmy · Panel administrativo</title>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
-  <header class="cabecera">
-    <span class="logo">CELLMY · ADMIN</span>
-    <nav class="acciones">
-      <button type="button" id="salir" class="enlace oculto">Cerrar sesión</button>
-    </nav>
-  </header>
-  <main class="contenedor">
-    <section id="contenido"></section>
-  </main>
+<body class="adm sin-sesion">
+  <div class="adm-layout">
+    <aside class="adm-menu">
+      <div class="adm-marca">
+        <span class="adm-logo">CELLMY</span>
+        <small>Panel administrativo</small>
+      </div>
+      <nav id="menu" class="adm-nav"></nav>
+      <button id="salir" type="button" class="adm-salir oculto">Cerrar sesión</button>
+    </aside>
+    <div class="adm-main">
+      <header class="adm-top">
+        <h1 id="titulo"></h1>
+        <div class="adm-usuario">
+          <span id="nombre-usuario"></span>
+          <span class="adm-avatar">A</span>
+        </div>
+      </header>
+      <main id="app" class="adm-contenido"></main>
+    </div>
+  </div>
   <script src="js/sesion.js"></script>
   <script src="js/admin.js"></script>
 </body>
