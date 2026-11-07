@@ -393,3 +393,6 @@ legend { font-weight: 700; padding: 0 6px; }
 .adm-logo-login { text-align: center; background: var(--negro); padding: 10px 0; border-radius: 10px; }
 .adm-login label { display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; }
 .adm-login input { padding: 10px 12px; border: 1px solid var(--linea); border-radius: 8px; font-size: 14px; font-weight: 400; }
+
+.adm-logo-img { height: 48px; width: auto; display: block; }
+.adm-logo-login { margin: 0 auto; }

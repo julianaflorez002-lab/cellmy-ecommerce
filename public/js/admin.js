@@ -265,7 +265,8 @@ function pantallaLogin() {
   titulo.textContent = 'Acceso administrativo';
   menu.replaceChildren();
   const form = crear('form', 'adm-login');
-  form.append(crear('span', 'adm-logo adm-logo-login', 'CELLMY'), crear('p', 'sku', 'Acceso restringido a personal autorizado.'));
+  const logo = crear('img', 'adm-logo-img adm-logo-login'); logo.src = 'img/logo.png'; logo.alt = 'Cellmy';
+  form.append(logo, crear('p', 'sku', 'Acceso restringido a personal autorizado.'));
   const correo = crear('input'); correo.type = 'email'; correo.required = true; correo.placeholder = 'correo@cellmy.com';
   const clave = crear('input'); clave.type = 'password'; clave.required = true;
   const etiquetaCorreo = crear('label', '', 'Correo electrónico'); etiquetaCorreo.append(correo);
